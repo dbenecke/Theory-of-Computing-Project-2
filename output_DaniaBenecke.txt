@@ -1,0 +1,112 @@
+test file: check_DaniaBenecke.csv
+
+TEST 1:
+
+    with input: abc
+    output:
+        Machine name: a*b*c* Nondeterministic
+        Intial string: abc
+        Accepted in this many transitions: 15
+        Depth of tree: 4
+        Trace:
+        [q0]abc
+        a[q0]bc
+        ab[q2]c
+        abc[q3]
+        abc_[qacc]
+        Degree of nondeterminism: 2.29
+        ('', 'q0', 'abc')
+        ('a', 'q0', 'bc')
+        ('a', 'q1', 'bc')
+        ('a', 'q2', 'bc')
+        ('a', 'q3', 'bc')
+        ('ab', 'q1', 'c')
+        ('ab', 'q2', 'c')
+        ('ab', 'q3', 'c')
+        ('ab', 'q1', 'c')
+        ('ab', 'q2', 'c')
+        ('ab', 'q3', 'c')
+        ('abc', 'q2', '')
+        ('abc', 'q3', '')
+        ('abc', 'q2', '')
+        ('abc', 'q3', '')
+        ('abc_', 'qacc', '')
+        
+
+TEST 2:
+    with input: aaabbbccc
+    output:
+        Machine name: a*b*c* Nondeterministic
+        Intial string: aabbcc
+        Accepted in this many transitions: 29
+        Depth of tree: 7
+        Trace:
+        [q0]aabbcc
+        a[q0]abbcc
+        aa[q0]bbcc
+        aab[q1]bcc
+        aabb[q2]cc
+        aabbc[q2]c
+        aabbcc[q3]
+        aabbcc_[qacc]
+        Degree of nondeterminism: 2.50
+        ('', 'q0', 'aabbcc')
+        ('a', 'q0', 'abbcc')
+        ('a', 'q1', 'abbcc')
+        ('a', 'q2', 'abbcc')
+        ('a', 'q3', 'abbcc')
+        ('aa', 'q0', 'bbcc')
+        ('aa', 'q1', 'bbcc')
+        ('aa', 'q2', 'bbcc')
+        ('aa', 'q3', 'bbcc')
+        ('aab', 'q1', 'bcc')
+        ('aab', 'q2', 'bcc')
+        ('aab', 'q3', 'bcc')
+        ('aab', 'q1', 'bcc')
+        ('aab', 'q2', 'bcc')
+        ('aab', 'q3', 'bcc')
+        ('aabb', 'q1', 'cc')
+        ('aabb', 'q2', 'cc')
+        ('aabb', 'q3', 'cc')
+        ('aabb', 'q1', 'cc')
+        ('aabb', 'q2', 'cc')
+        ('aabb', 'q3', 'cc')
+        ('aabbc', 'q2', 'c')
+        ('aabbc', 'q3', 'c')
+        ('aabbc', 'q2', 'c')
+        ('aabbc', 'q3', 'c')
+        ('aabbcc', 'q2', '')
+        ('aabbcc', 'q3', '')
+        ('aabbcc', 'q2', '')
+        ('aabbcc', 'q3', '')
+        ('aabbcc_', 'qacc', '')
+        
+
+TEST 3:
+    with input: abca
+    output:
+    Machine name: a*b*c* Nondeterministic
+        String rejected after this many transitions: 15
+        Depth of tree: 3
+        Trace:
+        [q0]abca
+        a[q0]bca
+        ab[q2]ca
+        abc[q2]a
+        Degree of nondeterminism: 2.80
+
+
+TEST 4:
+    with input:ca
+    output:
+        Machine name: a*b*c* Nondeterministic
+        String rejected after this many transitions: 3
+        Depth of tree: 1
+        Trace:
+        [q0]ca
+        c[q2]a
+        Degree of nondeterminism: 2.00
+
+
+
+
